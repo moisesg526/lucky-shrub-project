@@ -1,0 +1,12 @@
+header img {
+    width: 10rem;
+}
+
+
+footer {
+    display: flex;
+}
+
+footer img {
+    width: 3rem;
+}
