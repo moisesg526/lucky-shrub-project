@@ -1,5 +1,6 @@
 body {
   margin: 4rem;
+  background-color: #cdcdcd;
 }
 
 header > img {
@@ -8,6 +9,10 @@ header > img {
   margin-left: auto;
   margin-right: auto;
   padding: 0 0 2rem 0;
+}
+
+h1 {
+    font-size: 2rem;
 }
 
 nav {
@@ -35,7 +40,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #fff;
+  color: #fff;
 }
 
 section {
@@ -43,12 +48,35 @@ section {
 }
 
 article {
+  margin: 0 20px;
   flex: 1;
 }
 
+.main-img-text {
+    background-color: #c8c8c8;
+    padding: 2rem 1rem;
+    border-radius: 14px;
+}
+
+.main-img-text > article {
+    background-color: #b7c3cd;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+}
+
+article > p {
+    padding-top: 0.5rem;
+    text-align: left;
+}
+
 article > img {
-    width: 20rem;
-    height: 20rem;
+  width: 60%;
+  height: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
 }
 
 footer {
