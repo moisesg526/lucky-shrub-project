@@ -1,50 +1,57 @@
 body {
-  margin: 4rem;
+  margin: 2rem;
   background-color: #cdcdcd;
 }
 
-header > img {
-  width: 10rem;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 0 2rem 0;
+.plant-background {
+  background: url("/images/header-plant-background.jpg");
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-size: 100vw 800px;
 }
 
-h1 {
-    font-size: 2rem;
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-nav {
-  background-color: #b7c3cd;
-  margin: 0 auto;
-  border-radius: 14px;
+.logo > img {
+  width: 2rem;
 }
 
-nav ul {
+.nav > ul {
+  display: flex;
   list-style: none;
-  text-align: center;
-  padding: 1rem;
-}
-
-nav li {
-  display: inline-block;
-}
-
-nav a {
   text-decoration: none;
-  color: #436988;
-  padding: 0 1rem;
-  cursor: pointer;
-  font-weight: 600;
 }
 
-nav a:hover {
+ul > li {
+  padding: 2rem;
+}
+
+li > a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+}
+
+li > a:hover {
   color: #fff;
 }
 
 section {
   display: flex;
+}
+
+.sale-article {
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 10px;
+}
+
+.sale-article > p {
+  width: 60%;
 }
 
 article {
@@ -53,21 +60,21 @@ article {
 }
 
 .main-img-text {
-    background-color: #c8c8c8;
-    padding: 2rem 1rem;
-    border-radius: 14px;
+  background-color: #c8c8c8;
+  padding: 2rem 1rem;
+  border-radius: 14px;
 }
 
 .main-img-text > article {
-    background-color: #b7c3cd;
-    padding: 2rem;
-    text-align: center;
-    border-radius: 10px;
+  background-color: #b7c3cd;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 10px;
 }
 
 article > p {
-    padding-top: 0.5rem;
-    text-align: left;
+  padding-top: 0.5rem;
+  text-align: left;
 }
 
 article > img {
