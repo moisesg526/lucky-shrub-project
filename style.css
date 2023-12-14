@@ -1,23 +1,24 @@
 body {
-  margin: 2rem;
-  background-color: #cdcdcd;
+  margin: 0;
+  background-color: #f9f9f9;
 }
 
-.plant-background {
-  background: url("/images/header-plant-background.jpg");
-  background-repeat: no-repeat;
-  background-position: cover;
-  background-size: 100vw 800px;
-}
+/* ------------- Header ------------- */
 
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #e6e6e6;
+  padding: 0 2rem;
 }
 
 .logo > img {
   width: 2rem;
+}
+
+.home-btn {
+  color: rgb(1, 100, 100);
 }
 
 .nav > ul {
@@ -37,11 +38,21 @@ li > a {
 }
 
 li > a:hover {
-  color: #fff;
+  color: rgb(1, 100, 100);
 }
 
 section {
   display: flex;
+}
+
+/* ------------- Sale Section ------------- */
+
+.plant-background {
+  background-image: url("/images/header-plant-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 600px;
 }
 
 .sale-article {
@@ -50,8 +61,15 @@ section {
   border-radius: 10px;
 }
 
+.sale-article > h1 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
 .sale-article > p {
-  width: 60%;
+  padding: 2rem 0;
+  width: 40%;
+  font-size: 1.5rem;
 }
 
 article {
