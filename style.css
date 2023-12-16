@@ -98,6 +98,7 @@ article > p {
   color: #494949;
   padding-top: 0.5rem;
   text-align: left;
+  padding: 2rem;
 }
 
 article > img {
@@ -109,8 +110,13 @@ article > img {
   border-radius: 4px;
 }
 
+.article-block {
+  background-color: #eaeaea;
+  border-radius: 16px;
+}
+
 footer {
-  padding: 2rem 0 0;
+  padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
