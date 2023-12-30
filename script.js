@@ -33,3 +33,4 @@ const displayPlants = async () => {
 };
 
 displayPlants();
+
