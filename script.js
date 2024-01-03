@@ -1,4 +1,5 @@
 const display = document.querySelector("#display-data");
+const input = document.querySelector("#input");
 
 let APIKey = "sk-SVAZ658cd7515e87f3600";
 var requestOptions = {
@@ -16,21 +17,33 @@ const getData = async () => {
 };
 
 const displayPlants = async () => {
+  let query = input.value;
+  console.log("Query::", query);
+
+
   const callData = await getData();
 
-  let displayData = callData.data.map((object) => {
-    const { common_name, watering } = object;
+  let displayData = callData.filter((eventData) => {
+      if (query === "") {
+        return eventData;
+      } else if (
+        eventData.common_name.toLowerCase().includes(query.toLowerCase())
+      ) {
+        return eventData;
+      }
+    })
+    .map((object) => {
+      const { common_name, watering } = object;
 
-    return `
+      return `
     <div class="continer">
         <p>Name: ${common_name}</p> 
         <p>Watering: ${watering}</p>
     </div>
     `;
-  });
+    }).join("");
 
   display.innerHTML = displayData;
 };
 
 displayPlants();
-
