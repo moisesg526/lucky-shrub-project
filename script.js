@@ -9,7 +9,7 @@ var requestOptions = {
 
 const getData = async () => {
   const res = await fetch(
-    `https://perenual.com/api/species-list?key=${APIKey}`,
+    `https://perenual.com/api/species/details/[ID]?key=${APIKey}`,
     requestOptions
   );
   const data = await res.json();
@@ -20,10 +20,9 @@ const displayPlants = async () => {
   let query = input.value;
   console.log("Query::", query);
 
-
   const callData = await getData();
 
-  let displayData = callData.filter((eventData) => {
+  let displayData = Object.values(callData).filter((eventData) => {
       if (query === "") {
         return eventData;
       } else if (
@@ -41,9 +40,14 @@ const displayPlants = async () => {
         <p>Watering: ${watering}</p>
     </div>
     `;
-    }).join("");
+    })
+    .join("");
 
   display.innerHTML = displayData;
 };
 
 displayPlants();
+
+input.addEventListener("input", () => {
+  displayPlants();
+});

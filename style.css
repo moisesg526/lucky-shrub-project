@@ -5,6 +5,9 @@ body {
 }
 
 /* ------------- Header ------------- */
+.input-data {
+  display: none;
+}
 
 header {
   display: flex;
